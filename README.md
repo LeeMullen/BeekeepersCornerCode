@@ -11,3 +11,5 @@ Add authentication and control view/edit rights for each beekeeper.
 Add in a "bee yard" layer over the beehives layer with GPS coordinates to group beehives in relation to other yards.
 
 Improve record keeping on beehives for honey production and other statistics and provide reporting.
+
+Split Beekeepers Corner project into three separate projects: MVC Web project, Angular JS Web site, and business layer project with Entity Framework.  This will prevent javascript file conflicts in the Web site code.
