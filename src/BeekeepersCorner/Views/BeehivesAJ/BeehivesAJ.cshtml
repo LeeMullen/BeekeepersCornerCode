@@ -1,0 +1,14 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutAngular.cshtml";
+}
+
+<div ng-controller="BeehivesController">
+    <h2>Beehives (Angular JS)</h2>
+    <p>
+        <a asp-controller="BeehivesAJ" asp-action="Create">Create New Beehive</a>
+    </p>
+    <input type="text" ng-model="models.helloBeehives" />
+    <h1>{{models.helloBeehives}}</h1>
+
+</div>

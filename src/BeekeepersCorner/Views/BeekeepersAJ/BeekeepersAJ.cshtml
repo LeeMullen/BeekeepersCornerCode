@@ -1,0 +1,81 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutAngular.cshtml";
+}
+
+<div ng-controller="BeekeepersController">
+    <h2>Beekeepers Contact List (Angular JS)</h2>
+    <p>
+        <a asp-action="Create">Create New Beekeeper</a>
+    </p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Address
+                </th>
+                <th>
+                    City
+                </th>
+                <th>
+                    State
+                </th>
+                <th>
+                    Zipcode
+                </th>
+                <th>
+                    Phone
+                </th>
+                <th>
+                    Email
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+           
+                <tr ng-repeat="beekeeper in beekeepers">
+                    <td>
+                        {{beekeeper.FirstName}} 
+                    </td>
+                    <td>
+                        {{beekeeper.LastName}} 
+                    </td>
+                    <td>
+                        {{beekeeper.Address}} 
+                    </td>
+                    <td>
+                        {{beekeeper.City}} 
+                    </td>
+                    <td>
+                        {{beekeeper.State}} 
+                    </td>
+                    <td>
+                        {{beekeeper.Zipcode}} 
+                    </td>
+                    <td>
+                        {{beekeeper.Phone}} 
+                    </td>
+                    <td>
+                        {{beekeeper.Email}} 
+                    </td>
+                    <td>
+                        <a href="/BeehivesAJ/BeehivesAJ/{{beekeeper.BeekeeperId}}">View Beehives</a>
+                    </td>
+                    <td>
+                        <a href="/BeekeepersAJ/Edit/{{beekeeper.BeekeeperId}}">Edit</a>
+                        <a href="/BeekeepersAJ/Details/{{beekeeper.BeekeeperId}}">Details</a>
+                        <a href="/BeekeepersAJ/Delete/{{beekeeper.BeekeeperId}}">Delete</a>
+                    </td>
+                </tr>
+            
+        </tbody>
+    </table>
+    <a asp-area="" asp-controller="BeehivesAJ" asp-action="BeehivesAJ" class="navbar-brand">View Beehives</a>
+</div>

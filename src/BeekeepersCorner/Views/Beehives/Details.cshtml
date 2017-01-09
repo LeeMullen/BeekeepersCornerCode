@@ -1,0 +1,48 @@
+﻿@model BeekeepersCorner.Models.Beehive
+
+@{
+    var beekeeperID = Model.BeekeeperIDFK;
+    var beekeepername = (String)ViewData["BeekeeperName"];
+}
+
+<h2>View Beehive for @beekeepername</h2>
+
+
+    <div class="form-horizontal">
+        <hr />
+ 
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HiveName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.HiveName)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.InstallDate, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.InstallDate)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Notes, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.Notes)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.HoneyProduction, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.HoneyProduction)
+            </div>
+        </div>
+        
+    </div>
+
+<div>
+    @Html.ActionLink("Back to List", "Beehives", routeValues: new
+        {
+            id = beekeeperID
+        },
+        htmlAttributes: null)
+</div>

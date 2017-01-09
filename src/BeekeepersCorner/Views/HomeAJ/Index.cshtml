@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html ng-app="BeekeepersCornerMVCApp" ng-controller="HomePageController">
+<head>
+    <title ng-bind="models.helloAngular"></title>
+</head>
+<body>
+    <input type="text" ng-model="models.helloAngular" />
+    <h1>{{models.helloAngular}}</h1>
+
+
+    <ul>
+        <li><a href="/One">Route One</a></li>
+        <li><a href="/Two">Route Two</a></li>
+        <li><a href="/Three">Route Three</a></li>
+    </ul>
+
+    <div ng-view></div>
+
+
+    <script src="~/lib/angular/angular.js"></script>
+    <script src="~/lib/angular-route/angular-route.js"></script>
+    <script src="~/scripts/controllers/HomePageController.js"></script>
+    <script src="~/scripts/BeekeepersCornerMVCApp.js"></script>
+</body>
+</html>
